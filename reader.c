@@ -44,123 +44,20 @@ int main(int argc, char *argv[])
     /*read the states into the ledArray*/
     for(int a=0; a<numStates; a++)
     {
-        /*this will be repeated for every single state that we read
-        for (int b=0; b<64; b++)
+        /*this will be repeated for every single state that we read*/
+        printf("about to start state loop for the %ith time\n", a);
+        for(int y=60; y>47; y-=4)
         {
-            ledArray[a][b]=0;
-        }
-        */
-        /*
-        for(int x=4; x<17; x+=4)
-        {
-            for(int n=0; n<4; n++)
+            for(int x=0; x<49; x+=16)
             {
-                for(int y=(64-x-(16*n)); y<(64-(16*n)); y++)
+                for(int z=0; z<4; z++)
                 {
                     fscanf(fpi, "%i", &temp);
-                    printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-                    ledArray[a][y]=temp;
+                    printf("Read in %i,storing at (%i, %i)\n", temp, a, y-x+z);
+                    ledArray[a][y-x+z]=temp;
                 }
             }
         }
-        */
-        for(int y=60;y<64;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=44;y<48;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=28;y<32;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=12;y<16;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=56;y<60;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=40;y<44;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=24;y<28;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=8;y<12;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=52;y<56;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=36;y<40;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=20;y<24;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=4;y<8;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=48;y<52;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=32;y<36;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=16;y<20;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-        for(int y=0;y<4;y++)
-        {
-            fscanf(fpi, "%i", &temp);
-            printf("Read in %i , storing at (%i, %i)\n", temp, a, y);
-            ledArray[a][y]=temp;
-        }
-
     }
 
     printf("Read design into array. Get that pen!\n");
