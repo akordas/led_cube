@@ -35,6 +35,12 @@ int main(int argc, char *argv[])
     FILE* fpo = fopen(outputName, "w");
 
     fscanf(fpi, "%i", &numStates); /*get the number of states to be read*/
+    if (numStates>256)
+    {
+        printf("Sorry, but a maximum of 256 states is allowed\n");
+        return -1;
+    }
+
     int ledArray[numStates][64];
 
     printf("Initialized array for %i states.\n", numStates);
