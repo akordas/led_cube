@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
     FILE* fpo = fopen(outputName, "w");
 
     fscanf(fpi, "%i", &numStates); /*get the number of states to be read*/
-    if (numStates>256)
+    if (numStates>64)
     {
-        printf("Sorry, but a maximum of 256 states is allowed\n");
+        printf("Sorry, but a maximum of 64 states is allowed\n");
         return -1;
     }
 
