@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
     printf("Read design into array. Get that pen!\n");
 
-    fprintf(fpo, "DEPTH = 32;\nWIDTH = 64;\nADDRESS_RADIX = HEX;\n");
+    fprintf(fpo, "DEPTH = 64;\nWIDTH = 64;\nADDRESS_RADIX = HEX;\n");
     fprintf(fpo, "DATA_RADIX = BIN;\nCONTENT\nBEGIN\n");
 
     /*write the ledArray into the output file*/
