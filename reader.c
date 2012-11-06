@@ -68,26 +68,19 @@ int main(int argc, char *argv[])
 
     printf("Read design into array. Get that pen!\n");
 
-    fprintf(fpo, "DEPTH = 32;\nWIDTH = 64;\nADDRESS_RADIX = HEX;\n");
+    fprintf(fpo, "DEPTH = 64;\nWIDTH = 64;\nADDRESS_RADIX = UNS;\n");
     fprintf(fpo, "DATA_RADIX = BIN;\nCONTENT\nBEGIN\n");
 
     /*write the ledArray into the output file*/
     for(int s=0; s<numStates; s++)
     {
-        if (s<16)
-        {
-            fprintf(fpo, "0%x : ", s);
-        }
-        else
-        {
-            fprintf(fpo, "%x : ", s);
-        }
+        fprintf(fpo, "%i : ", s);
         /*this will be repeated for every single state that is in the array*/
         for(int t=0; t<64; t++)
         {
             fprintf(fpo, "%i", ledArray[s][t]);
         }
-        fprintf(fpo, "\n");
+        fprintf(fpo, ";\n");
     }
     fprintf(fpo, "END;\n");
 
